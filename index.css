@@ -38,22 +38,24 @@ button {
 /* BARRA LATERAL */
 .barra-lateral {
   grid-area: barra-lateral;
+  justify-content: center;
   background-color: var(--light-gray);
-  display: contents;
 }
 
 #logo {
   margin: 10px;
   top: 5px;
   left: 15px;
+  /* padding: 10px; */
   position: relative;
 }
 
 .fondo-negro {
   background-color: black;
-  border-radius: 5px;
-  margin: 0;
-  padding: 2px;
+  border-radius: 50%;
+  margin-left: -10px;
+  padding: 10px;
+  left: 0;
 }
 
 .fondo-negro-color {
@@ -62,7 +64,9 @@ button {
 
 .iconos ul li {
   list-style: none;
-  padding: 5px 0 15px 0;
+  /* padding: 5px 0 15px 0; */
+  padding: 10px;
+
 }
 
 #iconos-medio {
