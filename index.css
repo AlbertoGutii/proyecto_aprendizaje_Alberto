@@ -17,6 +17,10 @@ html, body {
   --text-2xl: 64px;
 }
 
+button {
+  box-shadow: none;
+}
+
 .container {
   display: grid;
   grid-template-columns: 0.2fr 1.3fr 1fr;
@@ -31,8 +35,44 @@ html, body {
   height: 100%;
 }
 
-.barra-lateral { grid-area: barra-lateral; }
+/* BARRA LATERAL */
+.barra-lateral {
+  grid-area: barra-lateral;
+  background-color: var(--light-gray);
+  display: contents;
+}
 
+#logo {
+  margin: 10px;
+  top: 5px;
+  left: 15px;
+  position: relative;
+}
+
+.fondo-negro {
+  background-color: black;
+  border-radius: 5px;
+  margin: 0;
+  padding: 2px;
+}
+
+.fondo-negro-color {
+  color: #fff;
+}
+
+.iconos ul li {
+  list-style: none;
+  padding: 5px 0 15px 0;
+}
+
+#iconos-medio {
+  margin-bottom: 85px;
+}
+
+#iconos-footer {
+  /* margin-top: 50px; */
+}
+/* FIN BARRA LATERAL */
 .busqueda { grid-area: busqueda; }
 
 .analisis { grid-area: analisis; }
@@ -70,3 +110,7 @@ html, body {
 .ventas { grid-area: ventas; }
 
 .pedidos { grid-area: pedidos; }
+
+a:active > svg{
+  transform: scale(0.9);
+}
