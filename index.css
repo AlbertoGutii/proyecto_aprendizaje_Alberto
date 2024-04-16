@@ -1,0 +1,51 @@
+.container {  display: grid;
+  grid-template-columns: 0.2fr 1.3fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr 3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "barra-lateral busqueda busqueda"
+    "barra-lateral analisis analisis"
+    "barra-lateral pagos pagos"
+    "barra-lateral graficas graficas";
+}
+
+.barra-lateral { grid-area: barra-lateral; }
+
+.busqueda { grid-area: busqueda; }
+
+.analisis { grid-area: analisis; }
+
+.pagos {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "beneficios revenue sessions"
+    "beneficios revenue sessions"
+    "beneficios revenue sessions";
+  grid-area: pagos;
+}
+
+.beneficios { grid-area: beneficios; }
+
+.revenue { grid-area: revenue; }
+
+.sessions { grid-area: sessions; }
+
+.graficas {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ventas ventas pedidos pedidos"
+    "ventas ventas pedidos pedidos"
+    "ventas ventas pedidos pedidos";
+  grid-area: graficas;
+}
+
+.ventas { grid-area: ventas; }
+
+.pedidos { grid-area: pedidos; }
