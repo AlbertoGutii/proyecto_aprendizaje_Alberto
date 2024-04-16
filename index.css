@@ -3,6 +3,20 @@ html, body {
   margin: 0;
 }
 
+:root {
+  --light-gray: #f7f7f7;
+  --gray: #e2e2e2;
+  --dark-gray: #888888;
+  --darker-gray: #666666;
+  --main-green: #5ee85b;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-xl: 40px;
+  --text-2xl: 64px;
+}
+
 .container {
   display: grid;
   grid-template-columns: 0.2fr 1.3fr 1fr;
