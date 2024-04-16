@@ -1,4 +1,10 @@
-.container {  display: grid;
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: grid;
   grid-template-columns: 0.2fr 1.3fr 1fr;
   grid-template-rows: 1fr 1fr 2fr 3fr;
   gap: 0px 0px;
@@ -8,6 +14,7 @@
     "barra-lateral analisis analisis"
     "barra-lateral pagos pagos"
     "barra-lateral graficas graficas";
+  height: 100%;
 }
 
 .barra-lateral { grid-area: barra-lateral; }
