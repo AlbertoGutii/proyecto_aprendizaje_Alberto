@@ -74,12 +74,66 @@ button {
   margin-bottom: 100px;
 }
 
-#iconos-footer {
-  /* margin-top: 50px; */
-}
+/* #iconos-footer {
+  margin-top: 50px;
+} */
 /* FIN BARRA LATERAL */
-.busqueda { grid-area: busqueda; }
 
+/* INICIO HEADER */
+.busqueda { 
+  grid-area: busqueda;
+}
+
+.busqueda div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+#barra-busqueda {
+  padding: 5px 10px;
+  border: 3px solid;
+  border-color: var(--gray);
+  border-radius: 30vh;
+}
+
+#barra-busqueda svg {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--gray);
+}
+
+#barra-busqueda input {
+  border-style: none;
+}
+
+#mensaje div {
+  padding: 5px 10px;
+  border: 3px solid;
+  border-color: var(--gray);
+  border-radius: 30vh;
+}
+
+#mensaje div svg {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--gray);
+}
+
+#mensaje div span {
+  padding: 0 5px;
+}
+
+.busqueda img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding-left: 5px;
+}
+
+/* FIN HEADER */
 .analisis { grid-area: analisis; }
 
 .pagos {  display: grid;
@@ -118,4 +172,8 @@ button {
 
 a:active > svg{
   transform: scale(0.9);
+}
+
+.busqueda, .analisis, .pagos, .graficas {
+  margin: 0 10px;
 }
