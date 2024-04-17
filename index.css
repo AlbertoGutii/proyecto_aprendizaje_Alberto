@@ -35,7 +35,7 @@ button {
   height: 100%;
 }
 
-/* BARRA LATERAL */
+/** BARRA LATERAL */
 .barra-lateral {
   grid-area: barra-lateral;
   justify-content: center;
@@ -63,6 +63,19 @@ button {
   color: #fff;
 }
 
+/* .fondo-gris {
+  background-color: var(--gray);
+  border: 2px solid var(--gray);
+  border-radius: 50%;
+  margin-left: -10px;
+  padding: 8px;
+  left: 0;
+}
+
+.fondo-gris-color {
+  color: black;
+} */
+
 .iconos ul li {
   list-style: none;
   /* padding: 5px 0 15px 0; */
@@ -77,9 +90,9 @@ button {
 /* #iconos-footer {
   margin-top: 50px;
 } */
-/* FIN BARRA LATERAL */
+/** FIN BARRA LATERAL */
 
-/* INICIO HEADER */
+/** INICIO HEADER */
 .busqueda { 
   grid-area: busqueda;
 }
@@ -132,8 +145,9 @@ button {
   border-radius: 50%;
   padding-left: 5px;
 }
+/** FIN HEADER */
 
-/* FIN HEADER */
+/** INICIO ANALISIS Y PAGOS */
 .analisis { grid-area: analisis; }
 
 .pagos {  display: grid;
@@ -153,7 +167,7 @@ button {
 .revenue { grid-area: revenue; }
 
 .sessions { grid-area: sessions; }
-
+/** FIN ANALISIS Y PAGOS */
 .graficas {  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
