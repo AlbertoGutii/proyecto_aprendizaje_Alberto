@@ -86,15 +86,17 @@ button {
 
 .busqueda div {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 5px;
 }
 
 #barra-busqueda {
-  padding: 1vw;
+  padding: 5px 10px;
   border: 3px solid;
   border-color: var(--gray);
   border-radius: 30vh;
-  width: 210px;
 }
 
 #barra-busqueda svg {
@@ -105,13 +107,30 @@ button {
 
 #barra-busqueda input {
   border-style: none;
-  margin-left: 5px;
+}
+
+#mensaje div {
+  padding: 5px 10px;
+  border: 3px solid;
+  border-color: var(--gray);
+  border-radius: 30vh;
+}
+
+#mensaje div svg {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--gray);
+}
+
+#mensaje div span {
+  padding: 0 5px;
 }
 
 .busqueda img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+  padding-left: 5px;
 }
 
 /* FIN HEADER */
@@ -153,4 +172,8 @@ button {
 
 a:active > svg{
   transform: scale(0.9);
+}
+
+.busqueda, .analisis, .pagos, .graficas {
+  margin: 0 10px;
 }
