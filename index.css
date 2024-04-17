@@ -74,12 +74,47 @@ button {
   margin-bottom: 100px;
 }
 
-#iconos-footer {
-  /* margin-top: 50px; */
-}
+/* #iconos-footer {
+  margin-top: 50px;
+} */
 /* FIN BARRA LATERAL */
-.busqueda { grid-area: busqueda; }
 
+/* INICIO HEADER */
+.busqueda { 
+  grid-area: busqueda;
+}
+
+.busqueda div {
+  display: flex;
+  margin-top: 5px;
+}
+
+#barra-busqueda {
+  padding: 1vw;
+  border: 3px solid;
+  border-color: var(--gray);
+  border-radius: 30vh;
+  width: 210px;
+}
+
+#barra-busqueda svg {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--gray);
+}
+
+#barra-busqueda input {
+  border-style: none;
+  margin-left: 5px;
+}
+
+.busqueda img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* FIN HEADER */
 .analisis { grid-area: analisis; }
 
 .pagos {  display: grid;
