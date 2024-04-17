@@ -24,7 +24,7 @@ button {
 .container {
   display: grid;
   grid-template-columns: 0.1fr 1.3fr 1fr;
-  grid-template-rows: 1fr 1fr 2fr 3fr;
+  grid-template-rows: 0.7fr 1fr 2fr 3fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -137,6 +137,7 @@ button {
 
 #mensaje div span {
   padding: 0 5px;
+  color: var(--darker-gray);
 }
 
 .busqueda img {
@@ -148,9 +149,54 @@ button {
 /** FIN HEADER */
 
 /** INICIO ANALISIS Y PAGOS */
-.analisis { grid-area: analisis; }
+.analisis { 
+  grid-area: analisis; 
+}
 
-.pagos {  display: grid;
+.analisis div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 5px;  */
+}
+
+.analisis div h1 {
+  font-size: var(--text-xl);
+}
+
+.cartelitos {
+  padding: 5px 10px;
+  border: 3px solid;
+  border-color: var(--gray);
+  border-radius: 30vh;
+  background-color: var(--gray);
+  /* width: 200px; */
+}
+
+.svg-blanco {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--light-gray);
+}
+
+.svg-gris {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--dark-gray);
+}
+
+.cartelitos-negros {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 30vh;
+  /* margin-left: -10px; */
+  left: 0;
+}
+
+.pagos {  
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.5fr 1fr 0.5fr;
   gap: 0px 0px;
@@ -168,6 +214,8 @@ button {
 
 .sessions { grid-area: sessions; }
 /** FIN ANALISIS Y PAGOS */
+
+/** INICIO GRAFICAS */
 .graficas {  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -183,6 +231,7 @@ button {
 .ventas { grid-area: ventas; }
 
 .pedidos { grid-area: pedidos; }
+/** FIN DE GRAFICAS */
 
 a:active > svg{
   transform: scale(0.9);
