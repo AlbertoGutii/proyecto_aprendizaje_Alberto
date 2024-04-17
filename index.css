@@ -1,0 +1,179 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+:root {
+  --light-gray: #f7f7f7;
+  --gray: #e2e2e2;
+  --dark-gray: #888888;
+  --darker-gray: #666666;
+  --main-green: #5ee85b;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-xl: 40px;
+  --text-2xl: 64px;
+}
+
+button {
+  box-shadow: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.1fr 1.3fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr 3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "barra-lateral busqueda busqueda"
+    "barra-lateral analisis analisis"
+    "barra-lateral pagos pagos"
+    "barra-lateral graficas graficas";
+  height: 100%;
+}
+
+/* BARRA LATERAL */
+.barra-lateral {
+  grid-area: barra-lateral;
+  justify-content: center;
+  background-color: var(--light-gray);
+}
+
+#logo {
+  margin: 10px;
+  top: 5px;
+  left: 10px;
+  padding: 8px;
+  position: relative;
+  margin-left: 5px;
+}
+
+.fondo-negro {
+  background-color: black;
+  border-radius: 50%;
+  margin-left: -10px;
+  padding: 8px;
+  left: 0;
+}
+
+.fondo-negro-color {
+  color: #fff;
+}
+
+.iconos ul li {
+  list-style: none;
+  /* padding: 5px 0 15px 0; */
+  padding: 7px;
+  margin-left: -10px;
+}
+
+#iconos-medio {
+  margin-bottom: 100px;
+}
+
+/* #iconos-footer {
+  margin-top: 50px;
+} */
+/* FIN BARRA LATERAL */
+
+/* INICIO HEADER */
+.busqueda { 
+  grid-area: busqueda;
+}
+
+.busqueda div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+#barra-busqueda {
+  padding: 5px 10px;
+  border: 3px solid;
+  border-color: var(--gray);
+  border-radius: 30vh;
+}
+
+#barra-busqueda svg {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--gray);
+}
+
+#barra-busqueda input {
+  border-style: none;
+}
+
+#mensaje div {
+  padding: 5px 10px;
+  border: 3px solid;
+  border-color: var(--gray);
+  border-radius: 30vh;
+}
+
+#mensaje div svg {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--gray);
+}
+
+#mensaje div span {
+  padding: 0 5px;
+}
+
+.busqueda img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding-left: 5px;
+}
+
+/* FIN HEADER */
+.analisis { grid-area: analisis; }
+
+.pagos {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "beneficios revenue sessions"
+    "beneficios revenue sessions"
+    "beneficios revenue sessions";
+  grid-area: pagos;
+}
+
+.beneficios { grid-area: beneficios; }
+
+.revenue { grid-area: revenue; }
+
+.sessions { grid-area: sessions; }
+
+.graficas {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ventas ventas pedidos pedidos"
+    "ventas ventas pedidos pedidos"
+    "ventas ventas pedidos pedidos";
+  grid-area: graficas;
+}
+
+.ventas { grid-area: ventas; }
+
+.pedidos { grid-area: pedidos; }
+
+a:active > svg{
+  transform: scale(0.9);
+}
+
+.busqueda, .analisis, .pagos, .graficas {
+  margin: 0 10px;
+}
