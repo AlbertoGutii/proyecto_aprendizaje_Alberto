@@ -150,19 +150,26 @@ button {
 
 /** INICIO ANALISIS Y PAGOS */
 .analisis { 
-  grid-area: analisis; 
+  grid-area: analisis;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .analisis div {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /*? PARA QUE SE VAYAN A LA DERECHA LOS CARTELES */
+  justify-content: flex-end;
+  gap: 1rem;
   align-items: center;
   /* margin-top: 5px;  */
 }
 
-.analisis div h1 {
+.analisis h1 {
   font-size: var(--text-xl);
+  /*? TEXTO SE DIVIDE */
+  width: 10ch;
 }
 
 .cartelitos {
