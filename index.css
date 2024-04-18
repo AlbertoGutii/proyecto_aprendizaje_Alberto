@@ -148,7 +148,7 @@ button {
 }
 /** FIN HEADER */
 
-/** INICIO ANALISIS Y PAGOS */
+/** INICIO ANALISIS */
 .analisis { 
   grid-area: analisis;
   display: flex;
@@ -201,26 +201,45 @@ button {
   /* margin-left: -10px; */
   left: 0;
 }
+/** FIN ANALISIS */
 
+/** INICIO PAGOS */
 .pagos {  
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr 0.5fr;
-  gap: 0px 0px;
+  grid-template-rows: 1fr;
+  gap: 1rem;
   grid-auto-flow: row;
   grid-template-areas:
-    "beneficios revenue sessions"
-    "beneficios revenue sessions"
     "beneficios revenue sessions";
   grid-area: pagos;
 }
+
+.revenue, .sessions {
+  padding: 5px 10px;
+  border: 3px solid;
+  border-color: var(--gray);
+  border-radius: 30vh;
+  background-color: var(--gray);
+  /* width: 200px; */
+}
+
+.beneficios {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 30vh;
+  /* margin-left: -10px; */
+  left: 0;
+}
+
 
 .beneficios { grid-area: beneficios; }
 
 .revenue { grid-area: revenue; }
 
 .sessions { grid-area: sessions; }
-/** FIN ANALISIS Y PAGOS */
+/** FIN PAGOS */
 
 /** INICIO GRAFICAS */
 .graficas {  display: grid;
