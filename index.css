@@ -24,7 +24,7 @@ button {
 .container {
   display: grid;
   grid-template-columns: 0.1fr 1.3fr 1fr;
-  grid-template-rows: 1fr 1fr 2fr 3fr;
+  grid-template-rows: 0.4fr 1fr 2fr 3fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -35,7 +35,7 @@ button {
   height: 100%;
 }
 
-/* BARRA LATERAL */
+/** BARRA LATERAL */
 .barra-lateral {
   grid-area: barra-lateral;
   justify-content: center;
@@ -55,7 +55,7 @@ button {
   background-color: black;
   border-radius: 50%;
   margin-left: -10px;
-  padding: 8px;
+  padding: 5px;
   left: 0;
 }
 
@@ -63,23 +63,36 @@ button {
   color: #fff;
 }
 
+.fondo-gris {
+  background-color: var(--gray);
+  border: 2px solid var(--gray);
+  border-radius: 50%;
+  margin: 5px -10px;
+  padding: 5px;
+  left: 0;
+}
+
+.fondo-gris-color {
+  color: black;
+}
+
 .iconos ul li {
   list-style: none;
   /* padding: 5px 0 15px 0; */
-  padding: 7px;
-  margin-left: -10px;
+  /* padding: 7px;
+  margin-left: -10px; */
 }
 
 #iconos-medio {
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 }
 
 /* #iconos-footer {
   margin-top: 50px;
 } */
-/* FIN BARRA LATERAL */
+/** FIN BARRA LATERAL */
 
-/* INICIO HEADER */
+/** INICIO HEADER */
 .busqueda { 
   grid-area: busqueda;
 }
@@ -124,6 +137,7 @@ button {
 
 #mensaje div span {
   padding: 0 5px;
+  color: var(--darker-gray);
 }
 
 .busqueda img {
@@ -132,18 +146,75 @@ button {
   border-radius: 50%;
   padding-left: 5px;
 }
+/** FIN HEADER */
 
-/* FIN HEADER */
-.analisis { grid-area: analisis; }
+/** INICIO ANALISIS */
+.analisis { 
+  grid-area: analisis;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-.pagos {  display: grid;
+.analisis div {
+  display: flex;
+  flex-direction: row;
+  /*? PARA QUE SE VAYAN A LA DERECHA LOS CARTELES */
+  justify-content: flex-end;
+  gap: 1rem;
+  align-items: center;
+  /* margin-top: 5px;  */
+}
+
+.analisis h1 {
+  font-size: var(--text-xl);
+  /*? TEXTO SE DIVIDE */
+  width: 10ch;
+}
+
+.cartelitos {
+  padding: 5px 10px;
+  border: 3px solid;
+  border-color: var(--gray);
+  border-radius: 30vh;
+  background-color: var(--gray);
+  /* width: 200px; */
+}
+
+.svg-blanco {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--light-gray);
+}
+
+.svg-gris {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--dark-gray);
+}
+
+.cartelitos-negros {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 30vh;
+  /* margin-left: -10px; */
+  left: 0;
+}
+
+#calendario p span {
+  color: var(--darker-gray);
+}
+/** FIN ANALISIS */
+
+/** INICIO PAGOS */
+.pagos {  
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr 0.5fr;
-  gap: 0px 0px;
+  grid-template-rows: 0.5fr;
+  gap: 1rem;
   grid-auto-flow: row;
   grid-template-areas:
-    "beneficios revenue sessions"
-    "beneficios revenue sessions"
     "beneficios revenue sessions";
   grid-area: pagos;
 }
@@ -154,6 +225,47 @@ button {
 
 .sessions { grid-area: sessions; }
 
+.revenue, .sessions {
+  padding: 10px 10px;
+  border: 3px solid;
+  border-color: var(--gray);
+  border-radius: 2.5rem;
+  background-color: var(--gray);
+}
+
+.beneficios {
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 2.5rem;
+}
+
+.beneficios div, .revenue div, .sessions div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.beneficios h1, .revenue h1, .sessions h1 {
+  font-size: var(--text-xl);
+  margin: 5px 0;
+}
+
+.beneficios p, .revenue p, .sessions p {
+  font-size: var(--text-md);
+}
+
+.beneficios p span {
+  color: var(--gray);
+}
+
+.revenue p span, .sessions p span {
+  color: var(--darker-gray);
+}
+
+/** FIN PAGOS */
+
+/** INICIO GRAFICAS */
 .graficas {  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -169,6 +281,7 @@ button {
 .ventas { grid-area: ventas; }
 
 .pedidos { grid-area: pedidos; }
+/** FIN DE GRAFICAS */
 
 a:active > svg{
   transform: scale(0.9);
