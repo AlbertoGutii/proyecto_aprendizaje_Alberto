@@ -24,7 +24,7 @@ button {
 .container {
   display: grid;
   grid-template-columns: 0.1fr 1.3fr 1fr;
-  grid-template-rows: 0.7fr 1fr 2fr 3fr;
+  grid-template-rows: 0.4fr 1fr 2fr 3fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -201,13 +201,17 @@ button {
   /* margin-left: -10px; */
   left: 0;
 }
+
+#calendario p span {
+  color: var(--darker-gray);
+}
 /** FIN ANALISIS */
 
 /** INICIO PAGOS */
 .pagos {  
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 0.5fr;
   gap: 1rem;
   grid-auto-flow: row;
   grid-template-areas:
@@ -215,30 +219,50 @@ button {
   grid-area: pagos;
 }
 
-.revenue, .sessions {
-  padding: 5px 10px;
-  border: 3px solid;
-  border-color: var(--gray);
-  border-radius: 30vh;
-  background-color: var(--gray);
-  /* width: 200px; */
-}
-
-.beneficios {
-  background-color: black;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 30vh;
-  /* margin-left: -10px; */
-  left: 0;
-}
-
-
 .beneficios { grid-area: beneficios; }
 
 .revenue { grid-area: revenue; }
 
 .sessions { grid-area: sessions; }
+
+.revenue, .sessions {
+  padding: 10px 10px;
+  border: 3px solid;
+  border-color: var(--gray);
+  border-radius: 2.5rem;
+  background-color: var(--gray);
+}
+
+.beneficios {
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 2.5rem;
+}
+
+.beneficios div, .revenue div, .sessions div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.beneficios h1, .revenue h1, .sessions h1 {
+  font-size: var(--text-xl);
+  margin: 5px 0;
+}
+
+.beneficios p, .revenue p, .sessions p {
+  font-size: var(--text-md);
+}
+
+.beneficios p span {
+  color: var(--gray);
+}
+
+.revenue p span, .sessions p span {
+  color: var(--darker-gray);
+}
+
 /** FIN PAGOS */
 
 /** INICIO GRAFICAS */
