@@ -155,6 +155,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 135px;
 }
 
 .analisis div {
@@ -211,9 +212,9 @@ button {
 /** INICIO PAGOS */
 .pagos {  
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
   grid-template-rows: 0.5fr;
-  gap: 1rem;
+  gap: 0.5rem;
   grid-auto-flow: row;
   grid-template-areas:
     "beneficios revenue sessions";
@@ -267,21 +268,27 @@ button {
 /** FIN PAGOS */
 
 /** INICIO GRAFICAS */
-.graficas {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+.graficas {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "ventas ventas pedidos pedidos"
-    "ventas ventas pedidos pedidos"
-    "ventas ventas pedidos pedidos";
+    "ventas pedidos"
+    "ventas pedidos"
+    "ventas pedidos";
   grid-area: graficas;
 }
 
-.ventas { grid-area: ventas; }
+.ventas {
+  display: grid;
+  grid-area: ventas; 
+}
 
-.pedidos { grid-area: pedidos; }
+.pedidos { 
+  grid-area: pedidos; 
+}
 /** FIN DE GRAFICAS */
 
 a:active > svg{
