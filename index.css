@@ -291,7 +291,7 @@ button {
 }
 /** FIN DE GRAFICAS */
 
-a:active > svg{
+button:active > svg{
   transform: scale(0.9);
 }
 
